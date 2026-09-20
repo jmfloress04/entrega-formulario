@@ -13,41 +13,49 @@
         <form action="procesar.php" method="post" novalidate>
             <fieldset>
                 <legend>Formulario de Datos Personales</legend>
-                <span id="control-nombre"></span>
+                <span id="control-nombre" aria-live="polite"></span>
                 <section>
                     <label for="nom">Nombre:</label>
                     <input type="text" id="nom" name="nombre" 
                         required 
                         maxlength="100"
-                        placeholder="Ej: Juan">
+                        placeholder="Ej: Juan"
+                        autocomplete="given-name"
+                        aria-describedby="control-nombre">
                 </section>
-                <span id="control-apellido"></span>
+                <span id="control-apellido" aria-live="polite"></span>
                 <section>
                     <label for="ape">Apellido:</label>
                     <input type="text" id="ape" name="apellido" 
                         required 
                         maxlength="100"
-                        placeholder="Ej: Perez">
+                        placeholder="Ej: Perez"
+                        autocomplete="family-name"
+                        aria-describedby="control-apellido">
                 </section>
-                <span id="control-email"></span>
+                <span id="control-email" aria-live="polite"></span>
                 <section>
                     <label for="mail">Email:</label>
                     <input type="email" id="mail" name="email" 
                         required 
                         maxlength="100"
-                        placeholder="ejemplo@dominio.com">
+                        placeholder="ejemplo@dominio.com"
+                        autocomplete="email"
+                        aria-describedby="control-email">
                 </section>
-                <span id="control-fechanac"></span>
+                <span id="control-fechanac" aria-live="polite"></span>
                 <section>
                     <label for="fech">Fecha de nacimiento:</label>
                     <input type="date" id="fech" name="fechanac" 
                         required
-                        min="1900-01-01">
+                        min="1900-01-01"
+                        autocomplete="bday"
+                        aria-describedby="control-fechanac">
                 </section>
-                <span id="control-paises"></span>
+                <span id="control-paises" aria-live="polite"></span>
                 <section>
                     <label for="paises">País de residencia:</label>
-                    <select id="paises" name="pais" required>
+                    <select id="paises" name="pais" required autocomplete="country" aria-describedby="control-paises">
                         <option value="" selected disabled hidden>Seleccione un país</option>
                         <option value="es">España</option>
                         <option value="ar">Argentina</option>
@@ -57,7 +65,7 @@
                     </select>
                 </section>
                 <input type="submit" value="Enviar" class="botones">
-                <button type="button" id="modo-oscuro" class="botones">Estilo de Alto Contraste</button>
+                <button type="button" id="modo-oscuro" class="botones" aria-pressed="false">Estilo de Alto Contraste</button>
             </fieldset>
         </form>
     </main>
