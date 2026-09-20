@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    padding: 1rem;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+form span {
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+
+form section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+form section label {
+    width: 40%;
+    font-weight: bold;
+}
+
+form input, form select, button {
+    width: 60%;
+    padding: 0.7rem;
+    border:  2px solid black;
+    border-radius: 0.7rem;
+}
+
+.botones {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-color: lightblue;
+}
+
+.botones:hover {
+    opacity: 0.85;
+}
+
+
+/*cambiar modo oscuro*/
+
+body.alto-contraste {
+    --acento: #4db8ff;
+    background-color: #121212;
+    color: #f2f2f2;
+}
+
+body.alto-contraste form {
+    border-color: var(--acento);
+}
+
+body.alto-contraste input,
+body.alto-contraste select {
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    border-color: var(--acento);
+}
+
+body.alto-contraste input:focus,
+body.alto-contraste select:focus,
+body.alto-contraste button:focus {
+    outline: none;
+    border-color: var(--acento);
+}
+
+body.alto-contraste .botones {
+    background-color: var(--acento);
+    color: #121212;
+    border-color: var(--acento);
+}
